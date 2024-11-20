@@ -1,0 +1,746 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Colors 
+ #131313
+ #D9D9D9
+ #A38F64
+ #9E0A0A
+ #959595
+ #452C2C
+ #352525
+ #201D1D
+ #1E1E1E */
+
+
+/* Fonts settings */
+
+@font-face {
+    font-family: 'Playfair Display';
+    src: url('/static/fonts/PlayfairDisplay-Regular.ttf'),
+        url('/static/fonts/PlayfairDisplay-Regular.woff');
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('/static/fonts/Raleway-Regular.ttf'),
+        url('/static/fonts/Raleway-Regular.woff');
+    font-style: normal;
+    font-display: swap;
+}
+
+.h1-text {
+    font-family: 'Playfair Display';
+    font-weight: 600;
+    font-size: 66px;
+    color: #131313
+}
+
+.h4-text {
+    font-family: 'Playfair Display';
+    font-weight: 600;
+    font-size: 26px;
+    color: #131313
+}
+
+.h5-text {
+    font-family: 'Playfair Display';
+    font-weight: 500;
+    font-size: 20px;
+    color: #131313
+}
+
+.copyright-text {
+    font-family: 'Playfair Display';
+    font-weight: 600;
+    font-size: 14px;
+    color: #D9D9D9
+}
+
+.site-text-main {
+    font-family: 'Raleway';
+    font-weight: 500;
+    font-size: 17px;
+    color: #D9D9D9;
+}
+
+.emails-link-name {
+    font-family: 'Raleway';
+    font-weight: 500;
+    font-size: 16px;
+    color: #131313
+}
+
+/* Basic site settings */
+
+html {
+    scroll-behavior: smooth;
+    background-color: #452C2C ;
+}
+
+body::before {
+    background-color: #452C2C;
+    content: "";
+    background-image: url(/static/img/bgr-picture.png);
+    opacity: 0.15;
+    position: fixed;
+    z-index: -1;
+    top: 0; left: 0; right: 0; bottom: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.main-container {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.mid-container {
+    max-width: 900px;
+    width: 96%;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Image's settings */
+
+
+.logo {
+    display: inline-block;
+    border: solid 4px #352525;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-top: 7px;
+    width: 166px;
+    min-width: 108px;
+    height: auto;
+    box-shadow: 10px 5px 25px 2px #131313;
+  }
+
+.logo img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+}
+
+.main-form-button {
+    display: flex;
+    overflow: hidden;
+    width: 12%;
+    height: auto;
+    background-color: #9E0A0A;
+    justify-content: center;
+    align-items: center;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.main-form-button img{
+    width: 30px;
+    height: auto;
+    object-fit: cover;
+}
+
+.social-media-icon {
+    display: inline-block;
+    overflow: hidden;
+    margin-top: 7px;
+    width: 35px;
+    min-width: 30px;
+    height: auto;
+}
+
+.social-media-icon img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.copyright-photo {
+    width: 15px;
+    height: auto;
+    object-fit: cover;
+    background-color: #D9D9D9;
+}
+
+/* Header */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+}
+
+.navbar-menu {
+    display: flex;
+    width: 1234px;
+    height: 65px;
+    align-items: center;
+    padding: 0 auto;
+    border: solid 4px #131313;
+    border-top: none;
+    border-bottom-left-radius: 10px;
+    margin-left: 24px;
+    background-color: #D9D9D9;
+    box-shadow: 10px 5px 25px 2px #131313;
+}
+
+.review {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #D9D9D9;
+    border-bottom-left-radius: 10px;
+    border-right: solid 4px #131313;
+    padding: 0 63px;
+    height: 65px;
+}
+
+.authors {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 116px;
+    height: 65px;
+    border-right: solid 4px #131313;
+}
+
+.registration {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    min-width: 160px;
+    width: 262px;
+    height: 65px;
+}
+
+.registration-between-line {
+    display: block;
+    width: 1px;
+    height: 22px;
+    background-color: #131313;
+}
+
+.navbar-name {
+    text-align: center;
+}
+
+.navbar-name:hover {
+    transition: 0.6s;
+    font-weight: 700;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* Main */
+
+.main {
+    margin-top: 92px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.site-info {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    height: 290px;
+}
+
+.site-header {
+    display: block;
+    padding: 20px;
+    background-color: #D9D9D9;
+    border-radius: 50px;
+    border: solid 4px #131313;
+    box-shadow: 10px 5px 25px 2px #131313;
+}
+
+.site-text {
+    display: block;
+    max-width: 570px;
+    line-height: 25px;
+}
+
+.form {
+    display: flex;
+}
+
+.main-form {
+    margin-top: 80px;
+    display: flex;
+    max-height: 40px;
+    width: 55vw;
+    box-shadow: 10px 5px 25px 2px #131313;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.main-form-input {
+    width: 88%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding: 5px;
+}
+
+.main-form-button:hover {
+    transition: 0.4s;
+    background-color: #6A0404;
+}
+
+.main-page-form-button-link {
+    width: 100%;
+    height: 100%;
+}
+
+/* Footer */
+
+.footer {
+    display: flex;
+    margin-top: 180px;
+}
+
+.contacts {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    height: 72px;
+    background-color: #D9D9D9;
+}
+
+.emails {
+    display: flex;
+    width: 76%;
+}
+
+.contacts-first-text {
+    display: flex;
+    width: 460px;
+    align-items: center;
+    padding-left: 30px;
+    padding-right: 45px;
+    text-align: center;
+}
+
+.emails-names {
+    display: flex;
+    flex-flow: column;
+    height: 47px;
+    width: 240px;
+    justify-content: space-between;
+}
+
+.emails-first-link-name:hover {
+    text-decoration: underline;
+    color: #131313;
+}
+
+.emails-second-link-name:hover {
+    text-decoration: underline;
+    color: #131313;
+}
+
+.contacts-second-text {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 30%;
+    justify-content: center;
+}
+
+.social-media {
+    width: 25%;
+    display: flex;
+    background-color: #A38F64;
+    align-items: center;
+    justify-content: center;
+    height: 72px;
+}
+
+.social-media-icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 62%;
+}
+
+/* Copyright */
+
+.copyright {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #131313;
+    padding: 2.5px 0;
+}
+
+.copyright-info {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 15%;
+}
+
+
+
+/* Authors site */
+
+/* Main */
+
+.main-au {
+    margin-top: 75px;
+    justify-content: center;
+}
+
+.site-info-au {
+    display: flex;
+    flex-flow: column;
+    height: 426px;
+    align-items: center;
+}
+
+.authors-header {
+    text-align: center;
+    background-color: #D9D9D9;
+    padding: 4px;
+    width: 70%;
+}
+
+.authors-header-name {
+    font-size: 42px;
+}
+
+.authors-info {
+    display: flex;
+    margin-top: 50px;
+    height: 100%;
+}
+
+.authors-spis {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-evenly;;
+}
+
+.site-info-au-text {
+    color: #D9D9D9;
+}
+
+.site-info-au-text-links {
+    color: #1E90FF;
+    margin-left: 15px;
+}
+
+.site-info-au-text-links:hover {
+    text-decoration: underline;
+    color: #1E90FF;
+}
+
+
+/* Review site */
+
+/* Main */
+
+.main-rv {
+    margin-top: 135px;
+}
+
+.site-info-rv {
+    height: 190px;
+    align-items: start;
+    text-align: left;
+}
+
+.site-header-rv {
+    padding: 12px;
+}
+
+.site-header-name-rv {
+    font-size: 42px;
+}
+
+.site-text-rv {
+    margin-left: 10px;
+}
+
+.main-form-button-link-name {
+    color: #D9D9D9
+}
+
+.footer-rv {
+    margin-top: 237px;
+}
+
+/* Sign Up */
+
+.su-form {
+    display: flex;
+    flex-flow: column;
+    text-align: center;
+    height: 401px;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #D9D9D9;
+    border: solid 4px #131313;
+    border-radius: 25px;
+    padding: 0 60px;
+}
+
+.su-header-name {
+    font-size: 46px;
+}
+
+.form-su-el {
+    height: 20px;
+    padding: 3px;
+    width: 80%;
+    border-radius: 10px;
+    font-size: 14px;
+}
+
+.form-su-btn {
+    width: 20%;
+    height: 30px;
+    border: solid 2px #131313;
+    border-radius: 15px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.info {
+    text-decoration: underline;
+}
+
+/* Log In */
+
+.bottom-form {
+    display: flex;
+    flex-flow: column;
+    height: 60px;
+    justify-content: space-between;
+}
+
+.or {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+/* Main page auth */
+
+.profile {
+    display: flex;
+    justify-content: center;
+}
+
+.dropbtn-auth {
+    background-color: #D9D9D9;
+    color: #131313;
+    font-size: 16px;
+    border: none;
+}
+
+.dropdown-auth {
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.dropdown-auth-content {
+    display: none;
+    flex-flow: column;
+    align-items: center;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-auth-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-auth-content a:hover {
+    background-color: #D9D9D9;
+}
+
+.dropdown-auth:hover .dropdown-auth-content {
+    display: flex;
+    box-shadow: 10px 5px 25px 2px #131313;
+}
+
+.dropdown-auth:hover .dropbtn-auth {
+    background-color: #D9D9D9;
+}
+
+.menu-link {
+    font-size: 16px;
+}
+
+/* Pictures slider */
+
+.main-pic {
+    margin-top: 30px;
+}
+
+.mid-pic-container {
+    max-width: 1080px;
+    width: 96%;
+    margin: 0 auto;
+}
+
+.pic-info {
+   display: flex;
+   flex-flow: column;
+   align-items: center;
+   height: 680px;
+   width: 100%;
+}
+
+.pic-header {
+    width: 35%;
+    padding: 6px;
+    text-align: center;
+}
+
+.pic-header-name {
+    font-size: 46px;
+}
+
+.pic-info-obsch {
+    margin-top: 40px;
+    text-align: center;
+    max-width: 700px;
+    line-height: 22px;
+}
+
+.pic-info-obsch-link {
+    color: #D9D9D9;
+    font-size: 14px;
+}
+
+.pic-info-obsch-link:after {
+    color: #D9D9D9;
+}
+
+.pic-info-obsch-link:hover {
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.7s;
+}
+
+.pic-slider{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+	width: 1080px;
+	position: relative;
+	padding-top: 320px;
+    background-color: transparent;
+	margin: 100px auto;
+	box-shadow: 10px 5px 25px 2px #131313;
+}
+
+.pic-slider>img{
+	position: absolute;
+    z-index: 1;
+    bottom: 150px;
+	transition: all 0.5s;
+}
+
+.pic-slider input[name='slide'] {
+	display: none;
+}
+
+.pic-slider label {
+	margin: 18px 0 0 18px;
+	display: flex;
+	border: 3px solid #999;
+	float: left;
+	cursor: pointer;
+	transition: all 0.5s;
+	opacity: 0.6;
+}
+
+.pic-slider label img{
+	display: flex;
+    justify-content: center;
+}
+
+.pic-slider input[name='slide']:checked+label {
+	border-color: #666;
+	opacity: 1;
+}
+
+.pic-slider input[name='slide'] ~ img {
+	opacity: 0;
+	transform: scale(1.1);
+}
+
+.pic-slider input[name='slide']:checked+label+img {
+	opacity: 1;
+	transform: scale(1);
+}
+
